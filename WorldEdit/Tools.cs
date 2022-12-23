@@ -4,6 +4,7 @@ using System.IO;
 using System.IO.Compression;
 using System.Linq;
 using Terraria;
+using Terraria.ID;
 using TShockAPI;
 using TShockAPI.DB;
 using Terraria.GameContent.Tile_Entities;
@@ -108,7 +109,7 @@ namespace WorldEdit
         public static List<int> GetTileID(string tile)
         {
             int ID;
-            if (int.TryParse(tile, out ID) && ID >= 0 && ID < Main.maxTileSets)
+            if (int.TryParse(tile, out ID) && ID >= 0 && ID < TileID.Count)
                 return new List<int> { ID };
 
             var list = new List<int>();
@@ -124,7 +125,7 @@ namespace WorldEdit
         public static List<int> GetWallID(string wall)
         {
             int ID;
-            if (int.TryParse(wall, out ID) && ID >= 0 && ID < Main.maxWallTypes)
+            if (int.TryParse(wall, out ID) && ID >= 0 && ID < WallID.Count)
                 return new List<int> { ID };
 
             var list = new List<int>();
