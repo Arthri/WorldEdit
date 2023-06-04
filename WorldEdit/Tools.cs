@@ -517,7 +517,7 @@ namespace WorldEdit
         {
             var tile = new Tile
             {
-                sTileHeader = reader.ReadUInt16(),
+                sTileHeader = reader.ReadInt16(),
                 bTileHeader = reader.ReadByte(),
                 bTileHeader2 = reader.ReadByte()
             };
@@ -532,7 +532,7 @@ namespace WorldEdit
                     tile.frameY = reader.ReadInt16();
                 }
             }
-            tile.wall = reader.ReadByte();
+            tile.wall = reader.ReadUInt16();
             tile.liquid = reader.ReadByte();
             return tile;
         }
