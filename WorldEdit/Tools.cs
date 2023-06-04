@@ -517,7 +517,7 @@ namespace WorldEdit
         {
             var tile = new Tile
             {
-                sTileHeader = reader.ReadInt16(),
+                sTileHeader = (uint)reader.ReadInt16(),
                 bTileHeader = reader.ReadByte(),
                 bTileHeader2 = reader.ReadByte()
             };
