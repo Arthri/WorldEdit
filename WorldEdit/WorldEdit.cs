@@ -155,7 +155,7 @@ namespace WorldEdit
                                 }
                                 info.Point = 0;
 								e.Handled = true;
-								TShock.Players[e.Msg.whoAmI].SendTileSquare(x, y, 3);
+								TShock.Players[e.Msg.whoAmI].SendTileSquareCentered(x, y, 3);
 							}
 						}
 					}
